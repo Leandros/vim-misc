@@ -1,0 +1,85 @@
+snippet lic "Add license header" b
+/* ========================================================================= */
+/* Copyright (C) 2017-2018 Arvid Gerstmann. All rights reserved.             */
+/* ========================================================================= */
+
+$0
+endsnippet
+
+snippet inc "Include a header file" b
+#include "${1:foo.h}"
+endsnippet
+
+snippet guard "Include guards" b
+#ifndef ${1:NAME}
+#define $1
+#pragma once
+
+$0
+
+#endif /* $1 */
+
+endsnippet
+
+snippet ns "Namespace" b
+namespace ${1:a}
+{
+
+$0
+
+} /* namespace $1 */
+
+endsnippet
+
+snippet main "Main Function"
+int
+main(int argc, char *argv[])
+{
+	$0
+	return 0;
+}
+
+endsnippet
+
+snippet todo "Insert todo"
+TODO(arvid): ${1:desc} (`!v strftime('%c')`)
+endsnippet
+
+snippet class "Insert class"
+class ${1:name}
+{
+public:
+	$1() {}
+
+private:
+};
+
+endsnippet
+
+snippet wall "Comment wall"
+/* ========================================================================= */
+/* ${1:name} */
+/* ========================================================================= */
+$0
+endsnippet
+
+snippet tpl "Template"
+template<${1:tpl}>
+endsnippet
+
+snippet tc "Test Case"
+TEST_CASE("${1:name}", "[${2:id}]")
+{
+	$0
+}
+
+endsnippet
+
+snippet job "Job Entry"
+JOB_ENTRY(${1:name})
+{
+	${2:arg} *arg = ($2 *)_arg;
+	$0
+}
+
+endsnippet
