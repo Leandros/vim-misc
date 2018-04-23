@@ -1,0 +1,20 @@
+
+snippet wall "Comment wall"
+/* ========================================================================= */
+/* ${1:name} */
+/* ========================================================================= */
+$0
+endsnippet
+
+snippet tpl "File Template" b
+import * as React from "react";
+import { ${1:StyleSheet} } from "react-native";
+
+function ${2:Foo}() {
+}
+
+export default $2;
+
+const styles = StyleSheet.create({
+});
+endsnippet

@@ -31,6 +31,11 @@ $0
 
 endsnippet
 
+snippet uns "Using Namespace" b
+using namespace ${1:a};
+
+endsnippet
+
 snippet main "Main Function"
 int
 main(int argc, char *argv[])
@@ -49,12 +54,21 @@ snippet class "Insert class"
 class ${1:name}
 {
 public:
-	$1() {}
+	$1() noexcept {}
 
 private:
-};
+}; /* class $1 */
 
 endsnippet
+
+snippet struct "Insert struct"
+struct ${1:name}
+{
+	$0
+}; /* struct $1 */
+
+endsnippet
+
 
 snippet wall "Comment wall"
 /* ========================================================================= */
